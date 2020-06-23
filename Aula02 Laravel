@@ -1,0 +1,32 @@
+BACKEND
+Revisar o Conceito de MVC 
+
+Configuração de conexão com banco de dados
+
+Criação de uma migration de cards (tabela no banco de dados)
+
+Efetuar o envio da tabela criada (tabela cards) através de migration para o banco de dados configurado
+
+Configurar o controller para buscar registros da tabela que foi criada e não mais de um simples array
+
+Criar os métodos para efetuar um CRUD e analisar / validar no Postman
+
+NÃO EXISTE VIEW, do lado da API utilizamos apenas duas camadas:
+    - Model (para representar uma tabela no banco de dados)
+    - Controller (para efetuar a regra de negócio e a criação dos métodos, por exemplo, métodos de um CRUD)
+
+FRONTEND
+
+Gerar as pastas de CSS e JS do bootstrap.
+
+Criar uma view que utilize o método index do CardsController para listar todos registros da tabela cards
+
+Criar uma view que contenha um formulário e utilize o método create do CardsController para cadastrar um novo registro na tabela cards
+
+Criar um ícone para alterar, de forma que o ícone direcione para uma view de edição de cadastro:
+
+Criar uma view que exiba o formulário preenchido e utilize o método edit do CardsController para alterar um card já existente
+
+Criar um ícone para excluir, de forma que o ícone direcione para um modal de confirmação de exclusão
+
+Ao longo da etapa de frontend iremos aprender como utilizar o conceito DRY (Don't Repeat Yourself)
