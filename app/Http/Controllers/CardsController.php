@@ -56,13 +56,25 @@ class CardsController extends Controller
         $card->content = $request->content;
 
 
-        $card ->update();
+       $card ->update();
 
-        //verificando se obteve registros para listar
-        if($card){
-            // retornando resposta JSON com card criado
-            return response()->json($card, 201);
+       //verificando se obteve registros para listar
+       if($card){
+        // retornando resposta JSON com card criado
+         return response()->json($card, 201);
     } 
    }
-   
+
+    public function delete($id){
+    // encontrando registro pelo id atraves do metodo find
+        $card = Card::find($id);
+
+        // efetuando sof delete para nao excluri registro efetivamente
+        // e sim popular a coluna deleted_at com a data atual passando
+        // apenas a impressao para o usuario que aquele registro deixou de existir
+        // mas ainda esta em nossa base de dados
+        if($card->delete()){
+            return response()->json('Registro excluído com sucesso', 200);
+        }
+    }
 }
